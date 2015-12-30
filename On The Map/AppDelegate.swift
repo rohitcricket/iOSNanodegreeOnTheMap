@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // [Optional] Power your app with Local Datastore. For more info, go to
         // https://parse.com/docs/ios_guide#localdatastore/iOS
-        
+       
         Parse.enableLocalDatastore()
         
         // Initialize Parse.
@@ -32,7 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
-
         
         return true
     }
