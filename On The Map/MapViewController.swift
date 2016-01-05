@@ -16,6 +16,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var tapPin: UIBarButtonItem!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,7 +29,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         
-        
+        /*
         let lattiude : CLLocationDegrees = 33.8090
         let longitude : CLLocationDegrees = -117.9190
         
@@ -37,6 +40,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         let span : MKCoordinateSpan = MKCoordinateSpanMake(latitudeDelta, longitudeDelta)
         
         let region : MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+        
+        let region : MKCoordinateRegion
+
+
         
         mapView.setRegion(region, animated: true)
         
@@ -53,16 +60,35 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         longPress.minimumPressDuration = 1.5
         mapView.addGestureRecognizer(longPress)
         
+        // drop Pin
+        
+        */
+        
+        // Source: http://stackoverflow.com/questions/25296691/swift-get-users-current-location-coordinates
+        
+        // Ask for Authorisation from the User.
+        self.locationManager.requestAlwaysAuthorization()
+        
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+       
         
     }
+    
+    
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func dropPin(sender: AnyObject) {
+        
+        
     }
     
-    
-    
+  /*
     func mapLongPress(recognizer: UIGestureRecognizer) {
         
         print("A long press has been detected.")
@@ -74,8 +100,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         mapView.addAnnotation(newPin)
         
     }
+    */
     
-
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         // print(locations)
         
@@ -96,5 +122,14 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         
     }
+    
+
+    /*
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+        print("locations = \(locValue.latitude) \(locValue.longitude)")
+    }
+    
+    */
 
 }

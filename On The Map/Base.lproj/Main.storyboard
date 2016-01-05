@@ -120,13 +120,13 @@
                     <navigationItem key="navigationItem" id="Bwc-ng-6P1">
                         <barButtonItem key="leftBarButtonItem" image="pin" id="rUa-Q1-iTH">
                             <connections>
-                                <action selector="tapPin:" destination="Jav-Ev-SyV" id="ptr-wP-bit"/>
+                                <action selector="dropPin:" destination="Jav-Ev-SyV" id="x8R-Zl-EQT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="78r-3M-WQI" id="g7B-Z3-Jxd"/>
-                        <outlet property="tapPin" destination="rUa-Q1-iTH" id="qCO-Zu-SHz"/>
+                        <outlet property="tapPin" destination="rUa-Q1-iTH" id="4cd-Vm-5VO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VEg-c2-zrm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -142,6 +142,7 @@
                         <viewControllerLayoutGuide type="bottom" id="P9A-36-dPQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="drJ-he-UZT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="345-VR-BNL">
@@ -161,10 +162,10 @@
                                 <exclude reference="345-VR-BNL"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="kQZ-Sn-uvl"/>
                                 <exclude reference="D9F-Se-k7N"/>
                                 <exclude reference="XLp-0w-ZXB"/>
                                 <exclude reference="YSe-Qu-dAd"/>
-                                <exclude reference="kQZ-Sn-uvl"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -172,10 +173,10 @@
                                 <include reference="345-VR-BNL"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="kQZ-Sn-uvl"/>
                                 <include reference="D9F-Se-k7N"/>
                                 <include reference="XLp-0w-ZXB"/>
                                 <include reference="YSe-Qu-dAd"/>
-                                <include reference="kQZ-Sn-uvl"/>
                             </mask>
                         </variation>
                     </view>
