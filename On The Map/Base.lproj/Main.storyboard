@@ -98,24 +98,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="78r-3M-WQI">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="78r-3M-WQI">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="64" width="400" height="536"/>
                                 </variation>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="78r-3M-WQI"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="78r-3M-WQI"/>
-                            </mask>
-                        </variation>
+                        <constraints>
+                            <constraint firstItem="78r-3M-WQI" firstAttribute="leading" secondItem="xIA-gW-BaB" secondAttribute="leading" id="6s9-dM-OK2"/>
+                            <constraint firstItem="78r-3M-WQI" firstAttribute="top" secondItem="5te-0Q-t12" secondAttribute="bottom" id="VLO-nD-W7J"/>
+                            <constraint firstItem="qrO-Q7-GYH" firstAttribute="top" secondItem="78r-3M-WQI" secondAttribute="bottom" id="a8B-WI-CWl"/>
+                            <constraint firstAttribute="trailing" secondItem="78r-3M-WQI" secondAttribute="trailing" id="n1Q-oN-NeC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Bwc-ng-6P1">
                         <barButtonItem key="leftBarButtonItem" image="pin" id="rUa-Q1-iTH">
@@ -131,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VEg-c2-zrm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1858.5" y="-341"/>
+            <point key="canvasLocation" x="1858" y="-341"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="KBY-no-Czg">
