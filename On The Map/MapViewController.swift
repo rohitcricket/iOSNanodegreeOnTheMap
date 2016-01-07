@@ -22,67 +22,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*
-
-        // User's location
-        
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestAlwaysAuthorization()
-        locationManager.startUpdatingLocation()
-        
-        /*
-        let lattiude : CLLocationDegrees = 33.8090
-        let longitude : CLLocationDegrees = -117.9190
-        
-        let location : CLLocationCoordinate2D = CLLocationCoordinate2DMake(lattiude, longitude)
-        
-        let latitudeDelta : CLLocationDegrees = 0.04
-        let longitudeDelta : CLLocationDegrees = 0.04
-        let span : MKCoordinateSpan = MKCoordinateSpanMake(latitudeDelta, longitudeDelta)
-        
-        let region : MKCoordinateRegion = MKCoordinateRegionMake(location, span)
-        
-        let region : MKCoordinateRegion
-
-
-        
-        mapView.setRegion(region, animated: true)
-        
-        // add map location and pin
-        
-        let disneyland = MKPointAnnotation()
-        disneyland.coordinate = location
-        disneyland.title = "The Happiest Place in the World!"
-        mapView.addAnnotation(disneyland)
-        
-        // add gesture recognizer
-        
-        let longPress = UILongPressGestureRecognizer(target: self, action: "mapLongPress:")
-        longPress.minimumPressDuration = 1.5
-        mapView.addGestureRecognizer(longPress)
-        
-        // drop Pin
-        
-        */
-        
-        // Source: http://stackoverflow.com/questions/25296691/swift-get-users-current-location-coordinates
-        
-        // Ask for Authorisation from the User.
-        self.locationManager.requestAlwaysAuthorization()
-        
-        // For use in foreground
-        self.locationManager.requestWhenInUseAuthorization()
-        
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            //locationManager.startUpdatingLocation()
-        }
-
-        */
-       
-        
     }
     
     
@@ -96,40 +35,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         
-        /*
-        let lattiude : CLLocationDegrees = 33.8090
-        let longitude : CLLocationDegrees = -117.9190
-        
-        let location : CLLocationCoordinate2D = CLLocationCoordinate2DMake(lattiude, longitude)
-        
-        let latitudeDelta : CLLocationDegrees = 0.04
-        let longitudeDelta : CLLocationDegrees = 0.04
-        let span : MKCoordinateSpan = MKCoordinateSpanMake(latitudeDelta, longitudeDelta)
-        
-        let region : MKCoordinateRegion = MKCoordinateRegionMake(location, span)
-        
-        let region : MKCoordinateRegion
-        
-        
-        
-        mapView.setRegion(region, animated: true)
-        
-        // add map location and pin
-        
-        let disneyland = MKPointAnnotation()
-        disneyland.coordinate = location
-        disneyland.title = "The Happiest Place in the World!"
-        mapView.addAnnotation(disneyland)
-        
-        // add gesture recognizer
-        
-        let longPress = UILongPressGestureRecognizer(target: self, action: "mapLongPress:")
-        longPress.minimumPressDuration = 1.5
-        mapView.addGestureRecognizer(longPress)
-        
-        // drop Pin
-        
-        */
         
         // Source: http://stackoverflow.com/questions/25296691/swift-get-users-current-location-coordinates
         
@@ -147,19 +52,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
     }
     
-  /*
-    func mapLongPress(recognizer: UIGestureRecognizer) {
-        
-        print("A long press has been detected.")
-        
-        let touchedAt = recognizer.locationInView(self.mapView)
-        let touchedAtCoordinate : CLLocationCoordinate2D = mapView.convertPoint(touchedAt, toCoordinateFromView: self.mapView)
-        let newPin = MKPointAnnotation()
-        newPin.coordinate = touchedAtCoordinate
-        mapView.addAnnotation(newPin)
-        
-    }
-    */
+
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         // print(locations)
@@ -187,12 +80,18 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
 
-    /*
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
-    }
-    
-    */
+}
+
+/*
+func mapLongPress(recognizer: UIGestureRecognizer) {
+
+print("A long press has been detected.")
+
+let touchedAt = recognizer.locationInView(self.mapView)
+let touchedAtCoordinate : CLLocationCoordinate2D = mapView.convertPoint(touchedAt, toCoordinateFromView: self.mapView)
+let newPin = MKPointAnnotation()
+newPin.coordinate = touchedAtCoordinate
+mapView.addAnnotation(newPin)
 
 }
+*/
