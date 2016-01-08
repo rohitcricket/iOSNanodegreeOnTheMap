@@ -26,6 +26,8 @@
 		9B77F1061C13B0B100162FE6 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B77F1051C13B0B100162FE6 /* libsqlite3.0.tbd */; };
 		9B77F1081C13B0C100162FE6 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B77F1071C13B0C100162FE6 /* Accounts.framework */; };
 		9B77F10A1C13B0CB00162FE6 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B77F1091C13B0CB00162FE6 /* Social.framework */; };
+		9B83C4561C3F39FB008DC678 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B83C4551C3F39FB008DC678 /* MyTableViewController.swift */; };
+		9B83C4581C3F3C15008DC678 /* MyMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B83C4571C3F3C15008DC678 /* MyMapViewController.swift */; };
 		9BB38FD91C12145500379914 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB38FD81C12145500379914 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		9B77F1051C13B0B100162FE6 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		9B77F1071C13B0C100162FE6 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		9B77F1091C13B0CB00162FE6 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		9B83C4551C3F39FB008DC678 /* MyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
+		9B83C4571C3F3C15008DC678 /* MyMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMapViewController.swift; sourceTree = "<group>"; };
 		9BB38FD81C12145500379914 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +106,8 @@
 				9B05AACF1C0FFC48002345A0 /* AppDelegate.swift */,
 				9B05AAD11C0FFC48002345A0 /* ViewController.swift */,
 				9B05AAD31C0FFC49002345A0 /* Main.storyboard */,
+				9B83C4571C3F3C15008DC678 /* MyMapViewController.swift */,
+				9B83C4551C3F39FB008DC678 /* MyTableViewController.swift */,
 				9BB38FD81C12145500379914 /* MapViewController.swift */,
 				9B05AAD61C0FFC49002345A0 /* Assets.xcassets */,
 				9B05AAD81C0FFC49002345A0 /* LaunchScreen.storyboard */,
@@ -205,6 +211,8 @@
 				9B05AAD21C0FFC48002345A0 /* ViewController.swift in Sources */,
 				9BB38FD91C12145500379914 /* MapViewController.swift in Sources */,
 				9B05AAD01C0FFC48002345A0 /* AppDelegate.swift in Sources */,
+				9B83C4581C3F3C15008DC678 /* MyMapViewController.swift in Sources */,
+				9B83C4561C3F39FB008DC678 /* MyTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
