@@ -72,10 +72,7 @@ class MyMapViewController: UIViewController, MKMapViewDelegate, CLLocationManage
         self.mapView.setRegion(region, animated: true)
         
         let myLocation = MKPointAnnotation()
-        myLocation.coordinate = location
-        mapView.addAnnotation(myLocation)
-        
-        
+     
         
     }
     

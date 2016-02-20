@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         //print(password)
         
         // Udacity API
-    
+        // Login
         
         let request = NSMutableURLRequest(URL: NSURL(string: "https://www.udacity.com/api/session")!)
         request.HTTPMethod = "POST"
@@ -50,6 +50,20 @@ class ViewController: UIViewController {
             print(NSString(data: newData, encoding: NSUTF8StringEncoding))
         }
         task.resume()
+        
+        // Get Student Data
+      
+        let requestParse = NSMutableURLRequest(URL: NSURL(string: "https://api.parse.com/1/classes/StudentLocation")!)
+        requestParse.addValue("QrX47CA9cyuGewLdsL7o5Eb8iug6Em8ye0dnAbIr", forHTTPHeaderField: "X-Parse-Application-Id")
+        requestParse.addValue("QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY", forHTTPHeaderField: "X-Parse-REST-API-Key")
+        let sessionParse = NSURLSession.sharedSession()
+        let taskParse = sessionParse.dataTaskWithRequest(request) { data, responseParse, error in
+            if error != nil { // Handle error...
+                return
+            }
+            print(NSString(data: data!, encoding: NSUTF8StringEncoding))
+        }
+        taskParse.resume()
 
         
     }
