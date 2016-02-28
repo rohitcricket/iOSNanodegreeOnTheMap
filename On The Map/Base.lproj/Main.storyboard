@@ -121,9 +121,6 @@
                                 <exclude reference="cVZ-YC-dBt"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="4tY-OF-1gC"/>
-                                <exclude reference="825-Sw-hxg"/>
-                                <exclude reference="wiJ-2Y-Hgi"/>
                                 <exclude reference="Rgs-Oe-Q5e"/>
                                 <exclude reference="vzJ-FH-l7e"/>
                                 <exclude reference="zKR-za-nCX"/>
@@ -133,6 +130,9 @@
                                 <exclude reference="P0f-wf-Dbp"/>
                                 <exclude reference="Yjh-Td-6qr"/>
                                 <exclude reference="dAE-eX-GOZ"/>
+                                <exclude reference="4tY-OF-1gC"/>
+                                <exclude reference="825-Sw-hxg"/>
+                                <exclude reference="wiJ-2Y-Hgi"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -143,9 +143,6 @@
                                 <include reference="cVZ-YC-dBt"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="4tY-OF-1gC"/>
-                                <include reference="825-Sw-hxg"/>
-                                <include reference="wiJ-2Y-Hgi"/>
                                 <include reference="Rgs-Oe-Q5e"/>
                                 <include reference="vzJ-FH-l7e"/>
                                 <include reference="zKR-za-nCX"/>
@@ -155,6 +152,9 @@
                                 <include reference="P0f-wf-Dbp"/>
                                 <include reference="Yjh-Td-6qr"/>
                                 <include reference="dAE-eX-GOZ"/>
+                                <include reference="4tY-OF-1gC"/>
+                                <include reference="825-Sw-hxg"/>
+                                <include reference="wiJ-2Y-Hgi"/>
                             </mask>
                         </variation>
                     </view>
