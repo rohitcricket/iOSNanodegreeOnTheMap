@@ -56,11 +56,36 @@ class ViewController: UIViewController {
         requestParse.addValue("QrX47CA9cyuGewLdsL7o5Eb8iug6Em8ye0dnAbIr", forHTTPHeaderField: "X-Parse-Application-Id")
         requestParse.addValue("QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY", forHTTPHeaderField: "X-Parse-REST-API-Key")
         let sessionParse = NSURLSession.sharedSession()
-        let taskParse = sessionParse.dataTaskWithRequest(request) { data, responseParse, error in
+        
+        let taskParse = sessionParse.dataTaskWithRequest(requestParse) { dataParse, responseParse, error in
             if error != nil { // Handle error...
                 return
             }
-            print(NSString(data: data!, encoding: NSUTF8StringEncoding))
+
+            //print(NSString(data: dataParse!, encoding: NSUTF8StringEncoding))
+            
+            do {
+                
+                let json = try NSJSONSerialization.JSONObjectWithData(dataParse!, options: NSJSONReadingOptions.AllowFragments)
+                
+                if let dict = json as? Dictionary<String, AnyObject> {
+                    
+                    if let firstName = dict["firstName"] as? String, let lastName = dict["lastName"] as? String, let mediaUrl = dict["mediaUrl"] as? String, let latitude = dict["latitude"] as? String, let longitude = dict["longitute"] as? String {
+                        
+                        let student = Student(firstName: firstName, lastName: lastName, mediaUrl: mediaUrl, latitude: latitude, longitude: longitude)
+                        
+                        print(student.latitude)
+                        //print(student.lastName)
+                    }
+                    //print("Did we get it? \(dict.debugDescription)")
+                }
+                
+               //print(json)
+                
+            } catch {
+                print("Could not serialize")
+            }
+     
         }
         taskParse.resume()
 

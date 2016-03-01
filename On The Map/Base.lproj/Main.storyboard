@@ -224,7 +224,7 @@
             </objects>
             <point key="canvasLocation" x="1357.5" y="870"/>
         </scene>
-        <!--Map-->
+        <!--My Map View Controller-->
         <scene sceneID="yb4-v8-Ubz">
             <objects>
                 <viewController id="ZGL-B2-HEJ" customClass="MyMapViewController" customModule="On_The_Map" customModuleProvider="target" sceneMemberID="viewController">
@@ -236,75 +236,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8yH-JX-tdf">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="5LZ-UB-RK1">
-                                        <barButtonItem key="leftBarButtonItem" image="pin" id="d4z-vx-ypu">
-                                            <connections>
-                                                <action selector="dropPin:" destination="ZGL-B2-HEJ" id="PJA-Cg-9sz"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jsm-xu-ucK">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jsm-xu-ucK" firstAttribute="leading" secondItem="6WE-Dl-rXG" secondAttribute="leading" id="1UN-jk-9nD"/>
-                            <constraint firstItem="T8b-xZ-ayO" firstAttribute="top" secondItem="jsm-xu-ucK" secondAttribute="bottom" id="40b-ue-SQt"/>
-                            <constraint firstItem="8yH-JX-tdf" firstAttribute="top" secondItem="6WE-Dl-rXG" secondAttribute="top" id="7H3-bY-md5"/>
-                            <constraint firstItem="8yH-JX-tdf" firstAttribute="leading" secondItem="6WE-Dl-rXG" secondAttribute="leading" id="NGC-O1-VsK"/>
-                            <constraint firstAttribute="trailing" secondItem="jsm-xu-ucK" secondAttribute="trailing" id="PSc-mL-mkZ"/>
-                            <constraint firstItem="jsm-xu-ucK" firstAttribute="top" secondItem="8yH-JX-tdf" secondAttribute="bottom" id="r8P-dN-e36"/>
-                            <constraint firstItem="T8b-xZ-ayO" firstAttribute="top" secondItem="8yH-JX-tdf" secondAttribute="bottom" constant="514" id="y8n-q9-VMS"/>
-                            <constraint firstAttribute="trailing" secondItem="8yH-JX-tdf" secondAttribute="trailing" id="yXI-mp-ubF"/>
+                            <constraint firstItem="jsm-xu-ucK" firstAttribute="top" secondItem="fAn-kU-3mm" secondAttribute="bottom" id="55e-ms-LDU"/>
+                            <constraint firstAttribute="trailing" secondItem="jsm-xu-ucK" secondAttribute="trailing" id="D9m-q9-g0B"/>
+                            <constraint firstItem="jsm-xu-ucK" firstAttribute="bottom" secondItem="T8b-xZ-ayO" secondAttribute="top" id="OlO-Ai-hCo"/>
+                            <constraint firstItem="jsm-xu-ucK" firstAttribute="leading" secondItem="6WE-Dl-rXG" secondAttribute="leading" id="oye-Ks-cAc"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="8yH-JX-tdf"/>
                                 <exclude reference="jsm-xu-ucK"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="40b-ue-SQt"/>
-                                <exclude reference="y8n-q9-VMS"/>
-                                <exclude reference="7H3-bY-md5"/>
-                                <exclude reference="NGC-O1-VsK"/>
-                                <exclude reference="yXI-mp-ubF"/>
-                                <exclude reference="1UN-jk-9nD"/>
-                                <exclude reference="PSc-mL-mkZ"/>
-                                <exclude reference="r8P-dN-e36"/>
+                                <exclude reference="55e-ms-LDU"/>
+                                <exclude reference="D9m-q9-g0B"/>
+                                <exclude reference="OlO-Ai-hCo"/>
+                                <exclude reference="oye-Ks-cAc"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="8yH-JX-tdf"/>
                                 <include reference="jsm-xu-ucK"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="40b-ue-SQt"/>
-                                <include reference="y8n-q9-VMS"/>
-                                <include reference="7H3-bY-md5"/>
-                                <include reference="NGC-O1-VsK"/>
-                                <include reference="yXI-mp-ubF"/>
-                                <include reference="1UN-jk-9nD"/>
-                                <include reference="PSc-mL-mkZ"/>
-                                <include reference="r8P-dN-e36"/>
+                                <include reference="55e-ms-LDU"/>
+                                <include reference="D9m-q9-g0B"/>
+                                <include reference="OlO-Ai-hCo"/>
+                                <include reference="oye-Ks-cAc"/>
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="map" id="nf1-5R-H2R"/>
+                    <navigationItem key="navigationItem" id="ftG-a3-0wM">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="fyW-74-da1"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="jsm-xu-ucK" id="nRv-JA-G7t"/>
-                        <outlet property="tapPin" destination="d4z-vx-ypu" id="cVj-Zw-gkj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bU-9I-9pt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1357.5" y="120"/>
+            <point key="canvasLocation" x="2275.5" y="120"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="oMx-91-S5F">
@@ -316,7 +291,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ZGL-B2-HEJ" kind="relationship" relationship="viewControllers" id="dMt-aq-FUo"/>
+                        <segue destination="qGc-L2-tHp" kind="relationship" relationship="viewControllers" id="dMt-aq-FUo"/>
                         <segue destination="MKb-3s-g8F" kind="relationship" relationship="viewControllers" id="XgQ-oX-AIF"/>
                     </connections>
                 </tabBarController>
@@ -342,10 +317,28 @@
             </objects>
             <point key="canvasLocation" x="-196.5" y="-341"/>
         </scene>
+        <!--Map-->
+        <scene sceneID="waV-eV-M4c">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qGc-L2-tHp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" image="map" id="nf1-5R-H2R"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CdH-yF-C4l">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZGL-B2-HEJ" kind="relationship" relationship="rootViewController" id="sUf-UG-SsF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Gt-ja-6gn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1357.5" y="120"/>
+        </scene>
     </scenes>
     <resources>
         <image name="list" width="32" height="32"/>
         <image name="map" width="32" height="32"/>
-        <image name="pin" width="15" height="25"/>
     </resources>
 </document>
