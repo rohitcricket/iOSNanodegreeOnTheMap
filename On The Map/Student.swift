@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Student {
+struct Student {
     private var _firstName: String!
     private var _lastName: String!
     private var _mediaUrl: String!

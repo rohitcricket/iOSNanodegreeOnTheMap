@@ -70,17 +70,17 @@ class ViewController: UIViewController {
                 
                 if let dict = json as? Dictionary<String, AnyObject> {
                     
-                    if let firstName = dict["firstName"] as? String, let lastName = dict["lastName"] as? String, let mediaUrl = dict["mediaUrl"] as? String, let latitude = dict["latitude"] as? String, let longitude = dict["longitute"] as? String {
-                        
+                    if let firstName = dict["results"]!["firstName"] as? String, let lastName = dict["results"]!["lastName"] as? String, let mediaUrl = dict["results"]!["mediaUrl"] as? String, let latitude = dict["results"]!["latitude"] as? String, let longitude = dict["results"]!["longitude"] as? String {
+             
                         let student = Student(firstName: firstName, lastName: lastName, mediaUrl: mediaUrl, latitude: latitude, longitude: longitude)
                         
-                        print(student.latitude)
+                        //print(student.latitude)
                         //print(student.lastName)
                     }
                    // print("Did we get it? \(dict.debugDescription)")
                 }
                 
-               //print(json)
+               print(json)
                 
             } catch {
                 print("Could not serialize")
