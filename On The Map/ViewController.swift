@@ -77,7 +77,7 @@ class ViewController: UIViewController {
                         print(student.latitude)
                         //print(student.lastName)
                     }
-                    //print("Did we get it? \(dict.debugDescription)")
+                   // print("Did we get it? \(dict.debugDescription)")
                 }
                 
                //print(json)
