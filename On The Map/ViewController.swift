@@ -74,12 +74,16 @@ class ViewController: UIViewController {
                         
                         for person in result{
                             
-                            if let firstName = person["firstName"], let lastName = person["lastName"], let mediaURL = person["mediaURL"], let latitude = person["latitude"], let longitude = person["longitude"] {
-                               // print(firstName, lastName, mediaURL, latitude, longitude)
+                            if let firstName = person["firstName"], let lastName = person["lastName"], let mediaURL = person["mediaURL"], let latitude = person["latitude"] , let longitude = person["longitude"]  {
+                              //  print(firstName, lastName, mediaURL, latitude, longitude)
                                 
+                           
                                 let student = Student(firstName: firstName as! String, lastName: lastName as! String, mediaURL: mediaURL as! String, latitude: latitude as! String, longitude: longitude as! String)
                                 
                                
+                                print(student.firstName)
+                             
+                                
                             }
                             /*
                             if let firstName = person["firstName"], let lastName = person["lastName"], let mediaUrl = person["mediaUrl"], let latitude = person["latitude"], let longitude = person["longitude"] {
