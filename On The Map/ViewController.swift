@@ -68,23 +68,58 @@ class ViewController: UIViewController {
                 
                 let json = try NSJSONSerialization.JSONObjectWithData(dataParse!, options: NSJSONReadingOptions.AllowFragments)
                 
+                if let resultsDict = json as? Dictionary<String, AnyObject> {
+                    if let result = resultsDict["results"] as? [[String: AnyObject]]  {
+                        //print(result)
+                        
+                        for person in result{
+                            
+                            if let firstName = person["firstName"], let lastName = person["lastName"], let mediaURL = person["mediaURL"], let latitude = person["latitude"], let longitude = person["longitude"] {
+                               // print(firstName, lastName, mediaURL, latitude, longitude)
+                                
+                                let student = Student(firstName: firstName as! String, lastName: lastName as! String, mediaURL: mediaURL as! String, latitude: latitude as! String, longitude: longitude as! String)
+                                
+                               
+                            }
+                            /*
+                            if let firstName = person["firstName"], let lastName = person["lastName"], let mediaUrl = person["mediaUrl"], let latitude = person["latitude"], let longitude = person["longitude"] {
+                                print(firstName)
+                            
+                                let student = Student(firstName: firstName as! String, lastName: lastName as! String, mediaUrl: mediaUrl as! String, latitude: latitude as! String, longitude: longitude as! String)
+                            
+                            }
+                            */
+
+                            
+                        }
+                    }
+                    //print(resultsDict)
+                    
+
+                }
+                
+                /*
                 if let dict = json as? Dictionary<String, AnyObject> {
                     
                     if let firstName = dict["results"]!["firstName"] as? String, let lastName = dict["results"]!["lastName"] as? String, let mediaUrl = dict["results"]!["mediaUrl"] as? String, let latitude = dict["results"]!["latitude"] as? String, let longitude = dict["results"]!["longitude"] as? String {
-             
+
                         let student = Student(firstName: firstName, lastName: lastName, mediaUrl: mediaUrl, latitude: latitude, longitude: longitude)
-                        
-                        //print(student.latitude)
+                                
+                       // print(student.latitude)
                         //print(student.lastName)
+
+
                     }
+
                    // print("Did we get it? \(dict.debugDescription)")
                 }
-                
-               print(json)
+                */
+               //print(json)
                 
             } catch {
                 print("Could not serialize")
             }
+            
      
         }
         taskParse.resume()

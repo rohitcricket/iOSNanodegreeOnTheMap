@@ -11,7 +11,7 @@ import Foundation
 struct Student {
     private var _firstName: String!
     private var _lastName: String!
-    private var _mediaUrl: String!
+    private var _mediaURL: String!
     private var _latitude: String!
     private var _longitude: String!
     
@@ -23,8 +23,8 @@ struct Student {
         return _lastName
     }
     
-    var mediaUrl: String {
-        return _mediaUrl
+    var mediaURL: String {
+        return _mediaURL
     }
     
     var latitude: String {
@@ -35,10 +35,10 @@ struct Student {
         return _longitude
     }
     
-    init(firstName: String, lastName: String, mediaUrl: String, latitude: String, longitude: String){
+    init(firstName: String, lastName: String, mediaURL: String, latitude: String, longitude: String){
         self._firstName = firstName
         self._lastName = lastName
-        self._mediaUrl = mediaUrl
+        self._mediaURL = mediaURL
         self._latitude = latitude
         self._longitude = longitude
     }
