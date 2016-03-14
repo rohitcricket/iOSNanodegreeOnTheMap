@@ -8,16 +8,33 @@
 
 import UIKit
 
-class MyTableViewController: UIViewController {
+class MyTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+        
+        self.myTableView.dataSource = self
+        self.myTableView.delegate = self
     }
+    
+    let friends = ["John", "Dagny", "Francisco"]
 
 
     @IBOutlet weak var myTableView: UITableView!
 
-
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = UITableViewCell()
+        let friend = friends[indexPath.row]
+        cell.textLabel!.text = friend
+        return cell
+        
+    }
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.friends.count
+    }
+    
 }

@@ -12,8 +12,8 @@ struct Student {
     private var _firstName: String!
     private var _lastName: String!
     private var _mediaURL: String!
-    private var _latitude: String!
-    private var _longitude: String!
+    private var _latitude: Double!
+    private var _longitude: Double!
     
     var firstName: String {
         return _firstName
@@ -27,15 +27,15 @@ struct Student {
         return _mediaURL
     }
     
-    var latitude: String {
+    var latitude: Double {
         return _latitude
     }
     
-    var longitude: String {
+    var longitude: Double {
         return _longitude
     }
     
-    init(firstName: String, lastName: String, mediaURL: String, latitude: String, longitude: String){
+    init(firstName: String, lastName: String, mediaURL: String, latitude: Double, longitude: Double){
         self._firstName = firstName
         self._lastName = lastName
         self._mediaURL = mediaURL

@@ -78,7 +78,7 @@ class ViewController: UIViewController {
                               //  print(firstName, lastName, mediaURL, latitude, longitude)
                                 
                            
-                                let student = Student(firstName: firstName as! String, lastName: lastName as! String, mediaURL: mediaURL as! String, latitude: latitude as! String, longitude: longitude as! String)
+                                let student = Student(firstName: firstName as! String, lastName: lastName as! String, mediaURL: mediaURL as! String, latitude: latitude as! Double, longitude: longitude as! Double)
                                 
                                
                                 print(student.firstName)
