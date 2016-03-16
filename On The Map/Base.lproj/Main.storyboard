@@ -271,10 +271,15 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="ftG-a3-0wM">
-                        <barButtonItem key="leftBarButtonItem" image="pin" id="fyW-74-da1"/>
+                        <barButtonItem key="leftBarButtonItem" image="pin" id="fyW-74-da1">
+                            <connections>
+                                <action selector="dropPin:" destination="ZGL-B2-HEJ" id="bJt-cp-6Kn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="jsm-xu-ucK" id="nRv-JA-G7t"/>
+                        <outlet property="tapPin" destination="fyW-74-da1" id="I7r-N0-JS6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bU-9I-9pt" userLabel="First Responder" sceneMemberID="firstResponder"/>

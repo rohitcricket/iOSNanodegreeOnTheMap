@@ -21,13 +21,17 @@ class MyTableViewController: UIViewController, UITableViewDelegate, UITableViewD
     let friends = ["John", "Dagny", "Francisco"]
 
 
+
     @IBOutlet weak var myTableView: UITableView!
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell()
-        let friend = friends[indexPath.row]
-        cell.textLabel!.text = friend
+        //let friend = friends[indexPath.row]
+        let studentArray = (UIApplication.sharedApplication().delegate as! AppDelegate).studentArray
+        let newStudentArr = studentArray?[indexPath.row]
+        //cell.textLabel!.text = friend
+        cell.textLabel!.text = newStudentArr?.firstName
         return cell
         
     }

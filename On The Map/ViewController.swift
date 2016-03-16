@@ -72,6 +72,8 @@ class ViewController: UIViewController {
                     if let result = resultsDict["results"] as? [[String: AnyObject]]  {
                         //print(result)
                         
+                        var studentArray = [Student]()
+                        
                         for person in result{
                             
                             if let firstName = person["firstName"], let lastName = person["lastName"], let mediaURL = person["mediaURL"], let latitude = person["latitude"] , let longitude = person["longitude"]  {
@@ -80,7 +82,7 @@ class ViewController: UIViewController {
                            
                                 let student = Student(firstName: firstName as! String, lastName: lastName as! String, mediaURL: mediaURL as! String, latitude: latitude as! Double, longitude: longitude as! Double)
                                 
-                               
+                                studentArray.append(student)
                                 print(student.firstName)
                              
                                 
@@ -98,7 +100,8 @@ class ViewController: UIViewController {
                         }
                     }
                     //print(resultsDict)
-                    
+
+                    let studentArray = (UIApplication.sharedApplication().delegate as! AppDelegate).studentArray
 
                 }
                 
