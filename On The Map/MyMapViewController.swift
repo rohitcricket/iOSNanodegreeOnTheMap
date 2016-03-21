@@ -34,9 +34,19 @@ class MyMapViewController: UIViewController, MKMapViewDelegate, CLLocationManage
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
+            
+            //let myLocation = MKPointAnnotation()
+            //mapView.addAnnotation(myLocation)
         }
         
-    
+        /*
+        let newYorkLocation = CLLocationCoordinate2DMake(40.730872, -74.003066)
+        // Drop a pin
+        let dropPin = MKPointAnnotation()
+        dropPin.coordinate = newYorkLocation
+        dropPin.title = "New York City"
+        mapView.addAnnotation(dropPin)
+        */
         
     }
     
@@ -90,6 +100,7 @@ class MyMapViewController: UIViewController, MKMapViewDelegate, CLLocationManage
         self.mapView.setRegion(region, animated: true)
         
         let myLocation = MKPointAnnotation()
+        mapView.addAnnotation(myLocation)
      
         
     }
