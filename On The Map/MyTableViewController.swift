@@ -19,7 +19,7 @@ class MyTableViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     let friends = ["John", "Dagny", "Francisco"]
-
+    //let studentArray = (UIApplication.sharedApplication().delegate as! AppDelegate).studentArray
 
 
     @IBOutlet weak var myTableView: UITableView!
@@ -31,14 +31,16 @@ class MyTableViewController: UIViewController, UITableViewDelegate, UITableViewD
         let studentArray = (UIApplication.sharedApplication().delegate as! AppDelegate).studentArray
         let newStudentArr = studentArray?[indexPath.row]
         //cell.textLabel!.text = friend
-        cell.textLabel!.text = newStudentArr?.firstName
+        cell.textLabel!.text = newStudentArr?.firstName 
         return cell
         
     }
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.friends.count
+       // return self.friends.count
+        return 100
+        
     }
     
 }

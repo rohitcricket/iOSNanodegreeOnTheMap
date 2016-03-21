@@ -22,12 +22,29 @@ class MyMapViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.mapView.delegate = self
+        
+        // Ask for Authorisation from the User.
+        self.locationManager.requestAlwaysAuthorization()
+        
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+        
+    
+        
     }
     
     
     
     @IBAction func dropPin(sender: AnyObject) {
         
+        /*
         // User's location
         
         locationManager.delegate = self
@@ -49,13 +66,14 @@ class MyMapViewController: UIViewController, MKMapViewDelegate, CLLocationManage
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
         }
+        */
         
     }
+
     
-    
-    
+
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        // print(locations)
+        print(locations)
         
         var currentLocation : CLLocation = locations[0] as! CLLocation
         
@@ -75,6 +93,20 @@ class MyMapViewController: UIViewController, MKMapViewDelegate, CLLocationManage
      
         
     }
+
     
+    /*
+    func mapLongPress(recognizer: UIGestureRecognizer) {
+    
+    print("A long press has been detected.")
+    
+    let touchedAt = recognizer.locationInView(self.mapView)
+    let touchedAtCoordinate : CLLocationCoordinate2D = mapView.convertPoint(touchedAt, toCoordinateFromView: self.mapView)
+    let newPin = MKPointAnnotation()
+    newPin.coordinate = touchedAtCoordinate
+    mapView.addAnnotation(newPin)
+    
+    }
+    */
     
 }

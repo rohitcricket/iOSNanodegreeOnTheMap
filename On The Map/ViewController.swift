@@ -72,7 +72,9 @@ class ViewController: UIViewController {
                     if let result = resultsDict["results"] as? [[String: AnyObject]]  {
                         //print(result)
                         
-                        var studentArray = [Student]()
+                        //var studentArray = [Student]()
+                        
+                        var studentArray = (UIApplication.sharedApplication().delegate as! AppDelegate).studentArray
                         
                         for person in result{
                             
@@ -82,26 +84,21 @@ class ViewController: UIViewController {
                            
                                 let student = Student(firstName: firstName as! String, lastName: lastName as! String, mediaURL: mediaURL as! String, latitude: latitude as! Double, longitude: longitude as! Double)
                                 
-                                studentArray.append(student)
-                                print(student.firstName)
+                                studentArray?.append(student)
+                                //print(student.firstName)
                              
                                 
                             }
-                            /*
-                            if let firstName = person["firstName"], let lastName = person["lastName"], let mediaUrl = person["mediaUrl"], let latitude = person["latitude"], let longitude = person["longitude"] {
-                                print(firstName)
-                            
-                                let student = Student(firstName: firstName as! String, lastName: lastName as! String, mediaUrl: mediaUrl as! String, latitude: latitude as! String, longitude: longitude as! String)
-                            
-                            }
-                            */
 
                             
                         }
+                        
+                        (UIApplication.sharedApplication().delegate as! AppDelegate).studentArray = studentArray
+                        
                     }
                     //print(resultsDict)
 
-                    let studentArray = (UIApplication.sharedApplication().delegate as! AppDelegate).studentArray
+            
 
                 }
                 

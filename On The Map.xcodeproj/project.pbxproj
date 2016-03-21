@@ -15,7 +15,6 @@
 		9B21F5161C850934002E0547 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21F5151C850934002E0547 /* Student.swift */; };
 		9B83C4561C3F39FB008DC678 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B83C4551C3F39FB008DC678 /* MyTableViewController.swift */; };
 		9B83C4581C3F3C15008DC678 /* MyMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B83C4571C3F3C15008DC678 /* MyMapViewController.swift */; };
-		9BB38FD91C12145500379914 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB38FD81C12145500379914 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		9B21F5151C850934002E0547 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		9B83C4551C3F39FB008DC678 /* MyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
 		9B83C4571C3F3C15008DC678 /* MyMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMapViewController.swift; sourceTree = "<group>"; };
-		9BB38FD81C12145500379914 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +66,6 @@
 				9B05AAD31C0FFC49002345A0 /* Main.storyboard */,
 				9B83C4571C3F3C15008DC678 /* MyMapViewController.swift */,
 				9B83C4551C3F39FB008DC678 /* MyTableViewController.swift */,
-				9BB38FD81C12145500379914 /* MapViewController.swift */,
 				9B05AAD61C0FFC49002345A0 /* Assets.xcassets */,
 				9B05AAD81C0FFC49002345A0 /* LaunchScreen.storyboard */,
 				9B05AADB1C0FFC49002345A0 /* Info.plist */,
@@ -149,7 +146,6 @@
 			files = (
 				9B05AAD21C0FFC48002345A0 /* ViewController.swift in Sources */,
 				9B21F5161C850934002E0547 /* Student.swift in Sources */,
-				9BB38FD91C12145500379914 /* MapViewController.swift in Sources */,
 				9B05AAD01C0FFC48002345A0 /* AppDelegate.swift in Sources */,
 				9B83C4581C3F3C15008DC678 /* MyMapViewController.swift in Sources */,
 				9B83C4561C3F39FB008DC678 /* MyTableViewController.swift in Sources */,
