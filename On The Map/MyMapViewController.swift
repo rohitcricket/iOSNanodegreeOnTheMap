@@ -100,6 +100,7 @@ class MyMapViewController: UIViewController, MKMapViewDelegate, CLLocationManage
         self.mapView.setRegion(region, animated: true)
         
         let myLocation = MKPointAnnotation()
+        myLocation.coordinate = currentLocation.coordinate
         mapView.addAnnotation(myLocation)
      
         
